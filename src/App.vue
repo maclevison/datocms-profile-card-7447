@@ -1,5 +1,5 @@
 <template>
-  <div v-if="data">  
+  <div v-if="data">
     <div
       :class="[
         'content flex flex-col p-12 h-screen content-center justify-center font-sans antialiased leading-normal relative',
@@ -21,7 +21,7 @@
           target="_blank"
           rel="noreferrer"
         >
-        / {{ profile.social }}
+          / {{ profile.social }}
         </a>
       </div>
 
@@ -29,10 +29,11 @@
 
       <!-- Pin to top right corner -->
       <div class="absolute top-0 right-0 h-12 w-18 p-4">
-        <button class="js-change-theme focus:outline-none text-xs font-mono"
+        <button
+          class="js-change-theme focus:outline-none text-xs font-mono"
           @click="toggleDayNight"
         >
-          {{ nightMode ? "light" : "dark" }}
+          {{ nightMode ? 'light' : 'dark' }}
         </button>
       </div>
     </div>
@@ -40,27 +41,27 @@
 </template>
 
 <script>
-import { request } from "./lib/datocms";
-import { toHead } from "vue-datocms";
+import { request } from './lib/datocms'
+import { toHead } from 'vue-datocms'
 
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      nightMode: window.matchMedia("(prefers-color-scheme: dark)").matches,
-      data: null
-    };
+      nightMode: window.matchMedia('(prefers-color-scheme: dark)').matches,
+      data: null,
+    }
   },
   methods: {
     toggleDayNight() {
-      this.nightMode = !this.nightMode;
-    }
+      this.nightMode = !this.nightMode
+    },
   },
   metaInfo() {
     if (!this || !this.data) {
-      return;
+      return
     }
-    return toHead(this.data.profile.seo, this.data.site.favicon);
+    return toHead(this.data.profile.seo, this.data.site.favicon)
   },
   async mounted() {
     this.data = await request({
@@ -88,10 +89,10 @@ export default {
           content
           tag
         }
-      `
-    });
-  }
-};
+      `,
+    })
+  },
+}
 </script>
 
 <style>
