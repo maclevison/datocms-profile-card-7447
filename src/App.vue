@@ -19,6 +19,7 @@
           :href="profile.url"
           :key="profile.social"
           target="_blank"
+          rel="noreferrer"
         >
         / {{ profile.social }}
         </a>
