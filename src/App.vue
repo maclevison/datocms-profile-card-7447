@@ -25,7 +25,7 @@
         </a>
       </div>
 
-      <div class="circle absolute rounded-full w-40 h-40 bg-primary-purple z-0"></div>
+      <div class="circle absolute rounded-full w-56 h-56 bg-primary-purple z-0"></div>
 
       <!-- Pin to top right corner -->
       <div class="absolute top-0 right-0 h-12 w-18 p-4">
