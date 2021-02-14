@@ -3,7 +3,7 @@
     <div
       :class="[
         'content flex flex-col p-12 h-screen content-center justify-center font-sans antialiased leading-normal relative',
-        nightMode ? 'text-light bg-secondary' : 'text-secondary bg-light',
+        nightMode ? 'text-primary-white bg-primary-black' : 'text-primary-black bg-primary-white',
       ]"
     >
       <h1 class="text-sm font-mono">/ {{ data.profile.name }}</h1>
@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <div class="circle absolute rounded-full w-40 h-40 bg-circle bg-primary z-0"></div>
+      <div class="circle absolute rounded-full w-40 h-40 bg-primary-purple z-0"></div>
 
       <!-- Pin to top right corner -->
       <div class="absolute top-0 right-0 h-12 w-18 p-4">
